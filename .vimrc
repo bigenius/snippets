@@ -1,0 +1,11 @@
+syntax enable
+set background=dark
+colorscheme darcula
+set backspace=indent,eol,start
+set cursorline
+set number
+set hlsearch
+set ruler
+set title
+set scrolloff=3
+set mouse+=a
