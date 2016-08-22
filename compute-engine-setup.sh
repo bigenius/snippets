@@ -11,6 +11,7 @@ mkdir newvar
 mount -o discard,defaults /dev/disk/by-id/google-p03-var /newvar
 cp -rp /var/* /newvar/
 echo '/dev/disk/by-id/google-p03-var /var ext4 discard,defaults 1 1' | tee -a /etc/fstab
+echo UUID=`sudo blkid -s UUID -o value /dev/disk/by-id/google-p03-var` /var ext4 discard,defaults 1 1 | sudo tee -a /etc/fstab
 
 echo "Europe/Stockholm" > /etc/timezone    
 dpkg-reconfigure -f noninteractive tzdata
